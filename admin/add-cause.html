@@ -1,0 +1,110 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>GIVE Platform</title>
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.css">
+    <link rel="stylesheet" href="../css/reset.css">
+    <link rel="stylesheet" href="../css/main.css">
+    <link rel="stylesheet" href="../css/admin.css">
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/js/bootstrap.min.js"></script>
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
+    <script>
+        $(function () {
+            $('#sidebar').load('./partials/frame.html');
+        });
+    </script>
+</head>
+
+<body>
+    <div id="sidebar">
+
+    </div>
+
+    <main class="main">
+        <div class="main-header">
+            <h3>Add focus area</h3>
+            <div class="header-actions">
+
+            </div>
+        </div>
+
+        <div class="main-content">
+            <ul class="tabs">
+
+            </ul>
+
+            <form>
+                <div class="left-section">
+                    <div class="card-content">
+                        <div class="form-section content-border">
+                            <div class="row">
+                                <div class="col-sm-12 col-md-12">
+                                    <div class="form-group">
+                                        <label class="form-label">Focus area</label>
+                                        <input type="text" class="form-control" name="Title">
+                                    </div>
+                                </div>
+
+                                <div class="col-sm-12 col-md-12">
+                                    <div class="form-group">
+                                        <label class="form-label">About cause</label>
+                                        <textarea class="form-control" name="Description" rows="8" cols="" placeholder="Describe your product in detail ..."></textarea>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+
+
+                    <div class="card-content">
+                        <div class="form-section content-border">
+                            <div class="section-title">
+                                <h3>Images</h3>
+                                <a href="">Add image from URL</a>
+                            </div>
+                            <div class="file-upload">
+                                <img src="assets/images/icons/add-image.svg" class="file-upload-icon">
+                                <span class="uploaded-image"></span>
+                                <input id="upload" class="file-upload-input" type="file" name="file-upload">
+                                <label for="upload" class="file-upload-label btn btn--transparent">
+                                    Add image
+                                </label>
+                                <span class="upload-text">or drag file to upload</span>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+
+                <div class="right-section">
+                    <div class="card-content">
+                        <div class="form-section content-border">
+                            <div class="row">
+                                <div class="col-sm-12 col-md-12">
+                                    <div class="form-group">
+                                        <label class="form-label">Project</label>
+                                        <input type="text" class="form-control" name="Title">
+                                    </div>
+                                </div>
+
+                                <div class="col-sm-12 col-md-12">
+                                    <div class="form-group">
+                                        <label class="form-label">URL</label>
+                                        <input type="text" class="form-control" name="Title">
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </form>
+        </div>
+    </main>
+</body>
+
+</html>

@@ -1,0 +1,400 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>GIVE Platform</title>
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.css">
+    <link rel="stylesheet" href="css/reset.css">
+    <link rel="stylesheet" href="css/main.css">
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/js/bootstrap.min.js"></script>
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
+    <script>
+        $(function () {
+            $('#nav').load('partials/nav.html');
+        });
+    </script>
+    <script>
+        $(function () {
+            $('#footer').load('partials/footer.html');
+        });
+    </script>
+    <script>
+        $(function () {
+            $('.donate-form').load('partials/donate-form.html');
+        });
+    </script>
+</head>
+
+<body>
+    <header id="nav">
+
+    </header>
+    <main>
+        <div class="hero hero-donate"></div>
+        <div class="hero-card">
+            <h1>Make a donation</h1>
+            <p>Sterling is dedicated to five areas of focus to build international relationships, improve lives, and create
+                a better world to support our peace efforts and end polio forever.</p>
+            <div class="card-cta">
+                <button class="btn">Learn More</button>
+            </div>
+        </div>
+
+        <section class="section no-margin">
+            <div class="container container--lg">
+                <div class="categories-container">
+                    <div class="section-header">
+                        <ul class="categories-tabs tabs">
+                            <li class="tab-link current" data-tab="projects">Projects</li>
+                            <li class="tab-link" data-tab="causes">Causes</li>
+                            <li class="tab-link" data-tab="endowments">Endowments</li>
+                        </ul>
+                        <div class="filter">
+                            <select class="">
+                                <option selected disabled>Filter</option>
+                                <option>Health</option>
+                                <option>Education</option>
+                                <option>Agriculture</option>
+                                <option>Renewable Energy</option>
+                                <option>Transportation</option>
+                            </select>
+                            <input type="text" class="search" name="search" placeholder="Search">
+                        </div>
+                    </div>
+
+
+                    <div class="container container--lg">
+                        <div class="section-body tab-content-margin">
+                            <div id="projects" class="tab-content current">
+                                <div class="section-top-text">
+                                    <div class="sort">
+                                        <label>Sort by</label>
+                                        <select class="">
+                                            <option selected disabled>Category</option>
+                                            <option>Health</option>
+                                            <option>Education</option>
+                                            <option>Agriculture</option>
+                                            <option>Renewable Energy</option>
+                                            <option>Transportation</option>
+                                        </select>
+                                    </div>
+                                    <div class="layout">
+                                        <span onclick="gridView()" class="active" data-layout="grid">
+                                            <svg class="grid" xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24">
+                                                <path fill="#D0021B" fill-rule="nonzero" d="M1.5 10.997a1.5 1.5 0 0 1-1.5-1.5v-8a1.5 1.5 0 0 1 1.5-1.5h8a1.5 1.5 0 0 1 1.5 1.5v8a1.5 1.5 0 0 1-1.5 1.5h-8zM14.5 10.997a1.5 1.5 0 0 1-1.5-1.5v-8a1.5 1.5 0 0 1 1.5-1.5h8a1.5 1.5 0 0 1 1.5 1.5v8a1.5 1.5 0 0 1-1.5 1.5h-8zM1.5 23.997a1.5 1.5 0 0 1-1.5-1.5v-8a1.5 1.5 0 0 1 1.5-1.5h8a1.5 1.5 0 0 1 1.5 1.5v8a1.5 1.5 0 0 1-1.5 1.5h-8zM14.5 23.997a1.5 1.5 0 0 1-1.5-1.5v-8a1.5 1.5 0 0 1 1.5-1.5h8a1.5 1.5 0 0 1 1.5 1.5v8a1.5 1.5 0 0 1-1.5 1.5h-8z"
+                                                />
+                                            </svg>
+                                        </span>
+                                        <span onclick="listView()" data-layout="list">
+                                            <svg class="list" xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 21">
+                                                <path fill="#C4CDD5" fill-rule="nonzero" d="M1.455 3h21.09C23.35 3 24 2.328 24 1.5S23.349 0 22.545 0H1.455C.65 0 0 .672 0 1.5S.651 3 1.455 3zM1.455 9C.65 9 0 9.672 0 10.5S.651 12 1.455 12h21.09C23.35 12 24 11.328 24 10.5S23.349 9 22.545 9H1.455zM22.545 18H1.455C.65 18 0 18.672 0 19.5S.651 21 1.455 21h21.09C23.35 21 24 20.328 24 19.5s-.651-1.5-1.455-1.5z"
+                                                />
+                                            </svg>
+                                        </span>
+                                    </div>
+                                </div>
+
+                                <div class="cards">
+                                    <div class="card causes">
+                                        <img src="./img/causes.png" alt="">
+                                        <div class="cause-details">
+                                            <div class="cause-header">
+                                                <h3 class="cause-title">S.O.S -
+                                                    <small class="progress-count">0% Complete</small>
+                                                </h3>
+                                                <p class="cause-description">Help improve the lives of children in this home and create a ...
+                                                    <a href="">read more</a>
+                                                </p>
+                                                <a href="" class="btn-text-red">Donate</a>
+                                            </div>
+                                            <div class="cause-targets">
+                                                <div class="raised">
+                                                    <small>Raised</small>
+                                                    <p>
+                                                        <strong>₦ 0</strong>
+                                                    </p>
+                                                </div>
+                                                <div class="goal">
+                                                    <small>Goal</small>
+                                                    <p>
+                                                        <strong>₦ 10,000</strong>
+                                                    </p>
+                                                </div>
+                                            </div>
+                                        </div>
+                                    </div>
+
+                                    <div class="card causes">
+                                        <img src="./img/causes.png" alt="">
+                                        <div class="cause-details">
+                                            <div class="cause-header">
+                                                <h3 class="cause-title">S.O.S -
+                                                    <small class="progress-count">0% Complete</small>
+                                                </h3>
+                                                <p class="cause-description">Help improve the lives of children in this home and create a ...
+                                                    <a href="">read more</a>
+                                                </p>
+                                                <a href="" class="btn-text-red">Donate</a>
+                                            </div>
+                                            <div class="cause-targets">
+                                                <div class="raised">
+                                                    <small>Raised</small>
+                                                    <p>
+                                                        <strong>₦ 0</strong>
+                                                    </p>
+                                                </div>
+                                                <div class="goal">
+                                                    <small>Goal</small>
+                                                    <p>
+                                                        <strong>₦ 10,000</strong>
+                                                    </p>
+                                                </div>
+                                            </div>
+                                        </div>
+                                    </div>
+
+
+                                    <div class="card causes">
+                                        <img src="./img/causes.png" alt="">
+                                        <div class="cause-details">
+                                            <div class="cause-header">
+                                                <h3 class="cause-title">S.O.S -
+                                                    <small class="progress-count">0% Complete</small>
+                                                </h3>
+                                                <p class="cause-description">Help improve the lives of children in this home and create a ...
+                                                    <a href="">read more</a>
+                                                </p>
+                                                <a href="" class="btn-text-red">Donate</a>
+                                            </div>
+                                            <div class="cause-targets">
+                                                <div class="raised">
+                                                    <small>Raised</small>
+                                                    <p>
+                                                        <strong>₦ 0</strong>
+                                                    </p>
+                                                </div>
+                                                <div class="goal">
+                                                    <small>Goal</small>
+                                                    <p>
+                                                        <strong>₦ 10,000</strong>
+                                                    </p>
+                                                </div>
+                                            </div>
+                                        </div>
+                                    </div>
+
+                                    <div class="card causes">
+                                        <img src="./img/causes.png" alt="">
+                                        <div class="cause-details">
+                                            <div class="cause-header">
+                                                <h3 class="cause-title">S.O.S -
+                                                    <small class="progress-count">0% Complete</small>
+                                                </h3>
+                                                <p class="cause-description">Help improve the lives of children in this home and create a ...
+                                                    <a href="">read more</a>
+                                                </p>
+                                                <a href="" class="btn-text-red">Donate</a>
+                                            </div>
+                                            <div class="cause-targets">
+                                                <div class="raised">
+                                                    <small>Raised</small>
+                                                    <p>
+                                                        <strong>₦ 0</strong>
+                                                    </p>
+                                                </div>
+                                                <div class="goal">
+                                                    <small>Goal</small>
+                                                    <p>
+                                                        <strong>₦ 10,000</strong>
+                                                    </p>
+                                                </div>
+                                            </div>
+                                        </div>
+                                    </div>
+
+                                    <div class="card causes">
+                                        <img src="./img/causes.png" alt="">
+                                        <div class="cause-details">
+                                            <div class="cause-header">
+                                                <h3 class="cause-title">S.O.S -
+                                                    <small class="progress-count">0% Complete</small>
+                                                </h3>
+                                                <p class="cause-description">Help improve the lives of children in this home and create a ...
+                                                    <a href="">read more</a>
+                                                </p>
+                                                <a href="" class="btn-text-red">Donate</a>
+                                            </div>
+                                            <div class="cause-targets">
+                                                <div class="raised">
+                                                    <small>Raised</small>
+                                                    <p>
+                                                        <strong>₦ 0</strong>
+                                                    </p>
+                                                </div>
+                                                <div class="goal">
+                                                    <small>Goal</small>
+                                                    <p>
+                                                        <strong>₦ 10,000</strong>
+                                                    </p>
+                                                </div>
+                                            </div>
+                                        </div>
+                                    </div>
+
+                                    <div class="card causes">
+                                        <img src="./img/causes.png" alt="">
+                                        <div class="cause-details">
+                                            <div class="cause-header">
+                                                <h3 class="cause-title">S.O.S -
+                                                    <small class="progress-count">0% Complete</small>
+                                                </h3>
+                                                <p class="cause-description">Help improve the lives of children in this home and create a ...
+                                                    <a href="">read more</a>
+                                                </p>
+                                                <a href="" class="btn-text-red">Donate</a>
+                                            </div>
+                                            <div class="cause-targets">
+                                                <div class="raised">
+                                                    <small>Raised</small>
+                                                    <p>
+                                                        <strong>₦ 0</strong>
+                                                    </p>
+                                                </div>
+                                                <div class="goal">
+                                                    <small>Goal</small>
+                                                    <p>
+                                                        <strong>₦ 10,000</strong>
+                                                    </p>
+                                                </div>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                                <p class="loading">Loading more ...</p>
+                            </div>
+
+
+                            <div id="causes" class="tab-content tab-equal-grid">
+                                <div class="section-top-text">
+                                    <!-- <h3>Donate now to help children in need</h3> -->
+                                </div>
+                                <div class="cards">
+                                    <div class="tab-left">
+                                        <div class="card">
+                                            <div class="donate-form">
+
+                                            </div>
+                                        </div>
+                                    </div>
+
+                                    <div class="tab-right">
+                                        <div class="causes list-view">
+                                            <img src="./img/causes.png" alt="">
+                                            <div class="cause-details">
+                                                <div class="cause-header">
+                                                    <h3 class="cause-title">S.O.S -
+                                                        <small class="progress-count">0% Complete</small>
+                                                    </h3>
+                                                    <p class="cause-description">Sterling is dedicated to five areas of focus to build international relationships,
+                                                        improve lives, and create a better world to support our peace efforts
+                                                        and end polio forever.
+                                                    </p>
+                                                    <a href="" class="btn-text-red">Donate</a>
+                                                </div>
+                                                <div class="cause-targets">
+                                                    <div class="raised">
+                                                        <small>Raised</small>
+                                                        <p>
+                                                            <strong>₦ 0</strong>
+                                                        </p>
+                                                    </div>
+                                                    <div class="goal">
+                                                        <small>Goal</small>
+                                                        <p>
+                                                            <strong>₦ 10,000</strong>
+                                                        </p>
+                                                    </div>
+                                                </div>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+
+
+                            <div id="endowments" class="tab-content tab-equal-grid">
+                                <div class="cards">
+                                    <div class="tab-left">
+                                        <div class="card">
+                                            <div class="donate-form">
+
+                                            </div>
+                                        </div>
+                                    </div>
+
+                                    <div class="tab-right">
+                                        <h3>Want to donate but not sure where?</h3>
+                                        <p>Sterling is dedicated to five areas of focus to build international relationships,
+                                            improve lives, and create a better world to support our peace efforts and end
+                                            polio forever.
+                                            <br>
+                                            <br>Give money as a one off or recurring payment to support any of the Charities
+                                            or Projects of our choosing.
+                                        </p>
+                                    </div>
+                                </div>
+                            </div>
+
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <section class="section causes-cta">
+            <div class="container container--lg">
+                <div class="section-header no-margin">
+                    <h1>Want to help our causes?</h1>
+                </div>
+                <div class="container container--xs">
+                    <div class="cta-box">
+                        <div class="cta-box-content">
+                            <p>Sterling is dedicated to five areas of focus to build international relationships, improve lives</p>
+                            <form id="join-form">
+                                <input type="email" class="form-control" name="email" id="email" placeholder="Email address" />
+                                <input type="submit" class="btn btn-red" name="join" value="Join" />
+                            </form>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+    </main>
+
+
+    <footer id="footer">
+
+    </footer>
+    <script src="js/main.js"></script>
+    <script>
+        $(document).ready(function () {
+            $('.tabs li').click(function () {
+                var tab_id = $(this).attr('data-tab');
+                $('.tabs li, .tab-link, .tab-content').removeClass('current');
+                $(this).addClass('current');
+                $("#" + tab_id).addClass('current');
+            })
+            $('.other-amount').focus(function () {
+                console.log('h')
+                $('.amount:checked').removeAttr("checked");
+            })
+        })
+    </script>
+</body>
+
+</html>
