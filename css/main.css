@@ -106,12 +106,15 @@ pre {
 }
 
 a {
+    color: inherit;
     background-color: transparent;
     -webkit-text-decoration-skip: objects
 }
 
 a:active,
 a:hover {
+    color: inherit;
+    text-decoration: none;
     outline-width: 0
 }
 
@@ -312,7 +315,7 @@ body {
 
 h1 {
     font-size: 30px;
-    font-weight: 600;
+    font-weight: 500;
 }
 
 h3 {
@@ -366,6 +369,12 @@ p {
     }
 }
 
+.clear-space {
+    height: 50px;
+    display: block;
+    clear: both;
+}
+
 .nav-search {
     font-size: 14px;
     padding: 3px;
@@ -416,8 +425,10 @@ p {
 }
 
 .nav-bar--lg {
-    background-color: #ffffff;
-    color: #d0021b;
+    position: absolute;
+    width: 100%;
+    color: #ffffff;
+    z-index: 99999999999;
 }
 
 .nav-bar ul li {
@@ -456,7 +467,7 @@ p {
     cursor: pointer;
 }
 
-.logo::before {
+.logo-red::before {
     content: '';
     background: url('../img/logo-icon.svg') center no-repeat;
     background-size: contain;
@@ -487,14 +498,16 @@ p {
 .hero {
     background: url('../img/bg1.jpg') no-repeat;
     background-size: cover;
-    width: 100%;
     height: 550px;
-    margin-top: 1px;
+    width: 100%;
 }
 
 .hero-donate {
-    background: url('../img/bg.jpg') no-repeat;
+    background: url('../img/dark-bg.jpg') no-repeat;
     background-size: cover;
+    width: 100%;
+    height: 100vh;
+    transition: .3s all ease;
 }
 
 .hero-card {
@@ -505,6 +518,15 @@ p {
     display: flex;
     flex-direction: column;
     justify-content: center;
+    color: #fff;
+    min-height: 370px;
+    max-width: 630px;
+    padding-top: 150px;
+    transition: .3s all ease;
+}
+
+.hero .hero-card {
+    position: absolute;
     background-color: rgba(0, 0, 0, 0.8);
     color: #fff;
     padding: 30px;
@@ -516,11 +538,19 @@ p {
 }
 
 .hero-card h1 {
-    margin-bottom: 1em;
+    margin-bottom: .5em;
 }
 
 .hero-card p {
     margin-bottom: 2em;
+}
+
+.tab-content {
+    margin-top: 60px;
+}
+
+.title-lg {
+    font-size: 45px;
 }
 
 .no-margin {
@@ -716,6 +746,7 @@ p {
     cursor: pointer;
 }
 
+/* 
 .list-view .card {
     justify-content: space-around;
     min-height: auto;
@@ -778,7 +809,7 @@ p {
 
 .list-view .cause-details {
     flex-basis: 38%;
-}
+} */
 
 .cause-targets {
     display: -webkit-box;
@@ -856,7 +887,7 @@ p {
     left: 0;
 }
 
-.tab-content {
+/* .tab-content {
     display: none;
     opacity: 0;
     transition: opacity .5s ease-in-out;
@@ -865,12 +896,48 @@ p {
 .tab-content.current {
     display: block;
     opacity: 1;
-}
+} */
 
 .categories-container {
-    background-color: #f9f9f9;
-    margin: -43px auto 0;
-    max-width: 1050px;
+    margin: 60px auto 0;
+}
+
+.categories {
+    display: -webkit-box;
+    display: -moz-box;
+    display: -ms-flexbox;
+    display: -webkit-flex;
+    display: flex;
+    justify-content: space-between;
+}
+
+.categories input["type=radio"] {
+    display: inline-block;
+}
+
+.category {
+    display: -webkit-box;
+    display: -moz-box;
+    display: -ms-flexbox;
+    display: -webkit-flex;
+    display: flex;
+    background-color: rgba(255, 255, 255, 0.45);
+    padding: 35px 20px;
+    border-radius: 3px;
+    flex-basis: 32%;
+}
+
+.category.active {
+    background-color: rgba(255, 255, 255, 1);
+}
+
+.category-content {
+    margin-top: 50px;
+}
+
+.cat-title {
+    color: #ffffff;
+    margin-bottom: 15px;
 }
 
 ul.categories-tabs {
@@ -954,7 +1021,6 @@ button {
 
 .form-row-flex>* {
     width: 100%;
-    margin-bottom: 1.5em;
 }
 
 /* @media screen and (min-width: 600px) {
@@ -965,7 +1031,7 @@ button {
 
 @media screen and (min-width: 550px) {
     .form-row-flex>* {
-        width: calc(80% - 110px);
+        width: calc(75% - 110px);
     }
 }
 
@@ -1036,6 +1102,7 @@ button {
 
 label {
     font-size: 14px;
+    margin-bottom: 5px;
 }
 
 .label {
@@ -1156,6 +1223,7 @@ label {
     flex-grow: 1;
     line-height: 1;
     font-size: 14px;
+    margin-bottom: 0;
 }
 
 .sort select {
@@ -1183,7 +1251,7 @@ label {
     }
 }
 
-.layout {
+/* .layout {
     display: none;
     vertical-align: -webkit-baseline-middle;
 }
@@ -1196,7 +1264,7 @@ label {
     .layout {
         display: inline-flex;
     }
-}
+} */
 
 #join-form {
     display: flex;
@@ -1280,6 +1348,11 @@ label {
     color: #fff;
     border: .05em solid #fff;
     background-color: transparent;
+}
+
+.btn-plain {
+    border: 1px solid rgba(151, 151, 151, 0.5);
+    border-radius: 5px;
 }
 
 a.btn-text-red {
